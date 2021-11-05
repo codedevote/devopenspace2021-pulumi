@@ -1,0 +1,4 @@
+config:
+  lab1:myname: Florian-prod
+  lab1:mysecret:
+    secure: AAABAAPbNSzQ6j34TQdC4tkiPtCNk4eua17cdfwtKtxRZzJpNkKwtLxZwg==
