@@ -1,0 +1,2 @@
+config:
+  lab2:imageName: nginx:1.21.0-alpine
