@@ -65,7 +65,7 @@ const service = new k8s.core.v1.Service("echoserver", {
         selector: appLabels,
         ports: [{
             port: 80,
-            targetPort:80,
+            targetPort: 80,
             protocol: "TCP"
         }],
         type: k8s.core.v1.ServiceSpecType.LoadBalancer
