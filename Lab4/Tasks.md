@@ -4,7 +4,7 @@
 
 In dieser Übung werden wir einen Integration Test für unser Pulumi Programm aus Lab3 schreiben. Man nennt das auch "Deploy-Check-Destroy" Tests, weil wir mit Hilfe von Pulumi unsere Infrastruktur in ein vergängliches (ephemeral) Environment deployen, gegen dieses Environment unsere Tests ausführen und danach dieses Deployment wieder zerstören.  
 
-Bis vor Kurzem war es nur möglich, diese Art von Tests für Pulumi in Go mit dem dafür existierenden Integration-Testing Framework zu schreiben. Seit im April 2021 mit Pulumi 3.0 auch die Pulumi Automation API released wurde, können wir für die Integration Tests in unserer "gewohnten" Typescript Umgebung bleiben und Test-Frameworks und Tools aus diesem Ökosystem nutzen.
+Bis April 2021 war es nur möglich, diese Art von Tests für Pulumi in Go mit dem dafür existierenden Integration-Testing Framework zu schreiben. Seit im April 2021 mit Pulumi 3.0 auch die Pulumi Automation API released wurde, können wir für die Integration Tests in unserer "gewohnten" Typescript Umgebung bleiben und Test-Frameworks und Tools aus diesem Ökosystem nutzen.
 
 ### Neues Projekt erstellen
 
@@ -41,9 +41,9 @@ Als nächstes implementieren wir die Pendants zu `pulumi up` und `pulumi destroy
 
 export async function deploy(): Promise<OutputMap> {
     
-    console.log(`deploying stack ${stack.name}`);
     const stack = await LocalWorkspace.createOrSelectStack(args);
-
+    console.log(`deploying stack ${stack.name}`);
+    
     // Konfiguration für den Stack setzen
     await stack.setConfig("azure-native:location", { value: "WestEurope" });
 
@@ -54,8 +54,8 @@ export async function deploy(): Promise<OutputMap> {
 
 export async function destroy() {
 
-    console.log(`destroying stack ${stack.name}`);
     const stack = await LocalWorkspace.createOrSelectStack(args);
+    console.log(`destroying stack ${stack.name}`);
 
     await stack.destroy({ onOutput: console.log });
 }

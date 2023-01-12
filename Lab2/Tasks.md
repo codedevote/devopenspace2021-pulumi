@@ -74,3 +74,8 @@ Nach Ausführung von `pulumi up` überprüfen wir, dass der Container nun erreic
 ```bash
 curl localhost:8080
 ```
+
+:muscle: **Weitere Aufgaben**
+
+1. Füge die Ports zur Konfiguration hinzu und verwende diese im Code.
+2. Erzeuge fünf solche Container.

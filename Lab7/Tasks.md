@@ -26,7 +26,7 @@ const managedCluster = new ManagedCluster("managedCluster", {
         vmSize: VirtualMachineSizeTypes.Standard_D2s_v3,
         mode: AgentPoolMode.System,
     }],
-    kubernetesVersion: "1.19.9",
+    kubernetesVersion: "???",   // should be 1.22.15, taken from config
     dnsPrefix: stackName,
     resourceGroupName: resourceGroup.name,
     resourceName: "akscluster",

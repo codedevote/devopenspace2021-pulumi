@@ -71,7 +71,7 @@ pulumi stack select dev
 
 :mag: Obwohl wir mehrere Stacks erzeugt haben, hat sich keine Datei verändert bzw. ist eine neue Datei im Projekt hinzugekommen. Dies liegt daran, dass die Information über die Stacks selbst vom Pulumi Service verwaltet werden.
 
-:bulb: Ähnlich wie bei Terraform gibt es die Möglichkeit, das State-Management ohne den Pulumi-Service zu betreiben (und den State z.B. auf AWS S3 oder Azure BlobStorage abzulegen). Es gibt hierzu nicht wirklich viel Information im Netz, ein guter Ansatz wird von Sam Cogan [hier](https://samcogan.com/storing-pulumi-state-in-azure/) in seinem Blogpost beschrieben.
+:bulb: Ähnlich wie bei Terraform gibt es die Möglichkeit, das State-Management ohne den Pulumi-Service zu betreiben (und den State z.B. auf AWS S3 oder Azure BlobStorage abzulegen). Es gibt hierzu mittlerweile einiges an Information im Netz, ein guter Ansatz wird von Sam Cogan [hier](https://samcogan.com/storing-pulumi-state-in-azure/) in seinem Blogpost beschrieben.
 
 ### Konfiguration eines Stacks
 
@@ -86,7 +86,7 @@ pulumi stack select dev
 pulumi config set myname Florian-dev
 ```
 
-:bulb: Durch das Festlegen eines Config-Parameters ist im Projektverzeichnis eine neu Datei entstanden.
+:bulb: Durch das Festlegen eines Config-Parameters ist im Projektverzeichnis eine neue Datei entstanden.
 
 :muscle: **Lege für die anderen Stacks ebenfalls einen solchen Config-Parameter an!**
 

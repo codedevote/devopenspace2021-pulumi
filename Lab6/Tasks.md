@@ -7,7 +7,6 @@ In dieser Übung werden wir einen Property Test für Lab5 schreiben. Ein Propert
 ### Neues Projekt erstellen
 
 1. Ein neues Pulumi Policy Projekt mit Namen `lab6` erstellen: `pulumi policy new azure-typescript`
-2. Da das Projekt-Template noch nicht den neuen `azure-native` Provider verwendet, aktualisieren wir die package.json selbst.
 
 ### Die "No-Public-IP" Policy
 
